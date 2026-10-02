@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "frontend:build:prod": "cd frontend && npm run build",
+    "frontend:dev": "cd frontend && npm run dev",
+    "backend:serve": "cd backend && bin/cake server"
+  }
+}

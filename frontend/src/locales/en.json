@@ -1,0 +1,21 @@
+{
+    "dockFooter" : {
+        "home" : "Home",
+        "contact" : "Contact"
+    },
+    "pages" : {
+        "home" : {
+            "title" : "This is home page"
+        },
+        "about" : {
+            "title" : "This is about page"
+        },
+        "login" : {
+            "email" : "Email address",
+            "password" : "Password",
+            "required" : "Required",
+            "login" : "Login",
+            "reset" : "Reset"
+        }
+    }
+}

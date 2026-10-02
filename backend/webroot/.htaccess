@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. SI l'URL commence par /app/ et que ce n'est pas un fichier réel (comme un .js ou .css)
+    # ALORS on force Apache à servir directement le index.html de Vue, en ignorant CakePHP
+    RewriteCond %{REQUEST_URI} ^/app/ [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^/(.*)$ app/index.html [L]
+
+    # 2. RÈGLES PAR DÉFAUT DE CAKEPHP (pour toutes les autres URLs)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
